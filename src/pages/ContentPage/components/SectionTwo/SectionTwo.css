@@ -1,0 +1,76 @@
+.section-two {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  z-index: 2;
+}
+
+/* Watermark số La Mã II */
+.watermark-bg {
+  position: absolute;
+  font-size: 500px;
+  color: rgba(167, 196, 133, 0.05);
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  font-family: serif;
+}
+
+/* Layout chia đôi theo trục timeline */
+.timeline-layout {
+  display: flex;
+  gap: 0;
+  position: relative;
+}
+
+.content-side-left {
+  flex: 1;
+  padding-right: 50px; /* Chừa khoảng cách đến đường kẻ giữa */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content-side-empty {
+  flex: 1;
+  padding-left: 50px;
+}
+
+/* Căn chỉnh danh sách card bên trái */
+.content-side-left .accordion-list {
+  width: 100%;
+  max-width: 550px;
+}
+
+/* Kiểu dáng danh sách chi tiết */
+.socialism-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socialism-details li {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.detail-label {
+  color: #84a358;
+  font-weight: bold;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .content-side-left {
+    padding-right: 0;
+    justify-content: center;
+  }
+  .content-side-empty {
+    display: none;
+  }
+}

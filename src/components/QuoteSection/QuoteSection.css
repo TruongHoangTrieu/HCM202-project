@@ -1,0 +1,54 @@
+.quote-section {
+  padding: 50px 20px;
+  background: #86a99a; /* xanh trầm giống ảnh */
+}
+
+.quote-container {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Icon */
+.quote-icon {
+  width: 42px;
+  height: 42px;
+  background: #a9d7b3;
+  color: #3f6f5c;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+/* Quote item */
+.quote-item {
+  margin-bottom: 10px;
+}
+
+.quote-text {
+  font-size: 25px;
+  font-weight: 500;
+  color: #ffffff !important;
+  line-height: 2;
+  margin-bottom: 12px;
+}
+
+.quote-author {
+  font-size: 13px;
+  color: #cde7d8;
+  
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .quote-text {
+    font-size: 17px;
+  }
+
+  .quote-section {
+    padding: 100px 20px;
+  }
+}

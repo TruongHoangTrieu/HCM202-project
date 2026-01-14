@@ -1,81 +1,93 @@
 import React, { useState, useEffect } from "react";
 import "./HeroSection.css";
+import { BookOpen, Leaf, Users } from "lucide-react";
+// Bước 1: Import visitorService từ đường dẫn file của bạn
+import { visitorService } from "../../services/visitorService"; 
 
 const HeroSection = () => {
-  const [scrollY, setScrollY] = useState(0);
+  // Bước 2: Tạo state để lưu trữ số lượt truy cập
+  const [visitorCount, setVisitorCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
+  // Bước 3: Gọi API khi component được render lần đầu
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
+    const fetchCount = async () => {
+      try {
+        const count = await visitorService.getVisitorCount();
+        setVisitorCount(count);
+      } catch (error) {
+        console.error("Không thể lấy số lượt truy cập:", error);
+      } finally {
+        setIsLoading(false);
+      }
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    fetchCount();
   }, []);
 
-  // Hàm tính toán opacity: Càng cuộn xuống opacity càng tiến về 0
-  // start: điểm bắt đầu biến mất, end: điểm biến mất hoàn toàn
-  const calculateOpacity = (start, end) => {
-    const opacity = 1 - (scrollY - start) / (end - start);
-    return Math.min(Math.max(opacity, 0), 1);
-  };
-
   return (
-    <section className="hero-section">
-      <div className="hero-bg-wrapper">
-        <video autoPlay muted loop playsInline className="hero-video">
-          <source src="/hero-background.mp4" type="video/mp4" />
-        </video>
-        <div className="hero-overlay"></div>
-      </div>
+    <section className="hero">
+      {/* floating decorations */}
+      <span className="float-dot dot-1" />
+      <span className="float-dot dot-2" />
+      <span className="float-dot dot-3" />
 
       <div className="hero-container">
-        {/* Các phần tử sẽ có opacity giảm dần theo thứ tự cuộn */}
-        <div 
-          className="hero-star" 
-          style={{ opacity: calculateOpacity(0, 150) }}
-        >★</div>
+        {/* pill */}
+        <div className="hero-pill">
+          <Leaf size={14} />
+          <span>Nền tảng học tập tư tưởng Hồ Chí Minh</span>
+        </div>
 
-        <p 
-          className="hero-sub-top"
-          style={{ opacity: calculateOpacity(50, 200) }}
-        >
-          LỊCH SỬ ĐẢNG CỘNG SẢN VIỆT NAM (1945-1975)
-        </p>
-
-        <h1 
-          className="hero-years"
-          style={{ opacity: calculateOpacity(100, 300) }}
-        >
-          1954 <span className="dash">—</span> 1965
+        {/* title */}
+        <h1 className="hero-title">
+          Khám Phá <span>Tư Tưởng</span>
+          <br />
+          <span>Hồ Chí Minh</span>
         </h1>
 
-        <h2 
-          className="hero-main-title"
-          style={{ opacity: calculateOpacity(150, 400) }}
-        >
-          HAI MIỀN – MỘT Ý CHÍ
-        </h2>
+        {/* description */}
+        <p className="hero-desc">
+          Tra cứu tài liệu, học tập qua flashcard, quiz và chatbot thông minh.
+          <br />
+          Hiểu sâu về di sản tư tưởng vĩ đại của dân tộc.
+        </p>
 
-        <div 
-          className="hero-quote-box"
-          style={{ opacity: calculateOpacity(200, 500) }}
-        >
-          <span className="quote-line"></span>
-          <p className="hero-quote">
-            "Đảng lãnh đạo – Bắc Nam chung sức – Dân tộc trường tồn"
-          </p>
+        {/* search */}
+        <div className="hero-search">
+          <input
+            type="text"
+            placeholder="Tìm kiếm tài liệu, bài viết, chủ đề..."
+          />
+          <button>Tìm kiếm</button>
         </div>
-      </div>
 
-      <div 
-        className="scroll-indicator"
-        style={{ opacity: calculateOpacity(0, 100) }}
-      >
-        <span className="scroll-text">BẮT ĐẦU HÀNH TRÌNH</span>
-        <div className="scroll-arrow">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7 10L12 15L17 10" stroke="#ffd700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
+        {/* stats */}
+        <div className="hero-stats">
+          <div className="stat-card">
+            <BookOpen />
+            <div>
+              <strong>100+</strong>
+              <span>Tài liệu</span>
+            </div>
+          </div>
+
+          <div className="stat-card">
+            <Leaf />
+            <div>
+              <strong>50+</strong>
+              <span>Flashcard</span>
+            </div>
+          </div>
+
+          <div className="stat-card">
+            <Users />
+            <div>
+              {/* Bước 4: Thay thế số 1.248 bằng dữ liệu từ state */}
+              <strong>{isLoading ? "..." : visitorCount.toLocaleString()}</strong>
+              <span> Lượt truy cập</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
