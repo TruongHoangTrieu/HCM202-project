@@ -16,7 +16,9 @@
   text-align: center;
   margin-bottom: 50px;
 }
-
+.blog-header p{
+  color: var(--primary-green);
+}
 .blog-header h1 {
   font-size: 42px;
   color: var(--text-dark);
@@ -237,4 +239,55 @@
 
 .video-card {
   cursor: pointer; /* Đổi con trỏ chuột khi rê vào video */
+}
+.swiper {
+  padding-bottom: 40px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-green);
+}
+.video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Khung chứa 2 nút */
+.video-nav {
+  display: flex;
+  gap: 8px;
+}
+
+/* Nút tròn nhỏ */
+.video-prev,
+.video-next {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+  background: white;
+  color: var(--primary-green);
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-prev:hover,
+.video-next:hover {
+  background: var(--primary-green);
+  color: white;
+  border-color: var(--primary-green);
+}
+
+/* Disable khi ở đầu/cuối */
+.video-prev.swiper-button-disabled,
+.video-next.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }

@@ -1,0 +1,91 @@
+.ai-usage-page {
+  background: #f6faf7;
+  min-height: 100vh;
+  padding: 60px 20px;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Header */
+.ai-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ai-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 20px;
+  background: #e3f3ea;
+  color: #3a7f5d;
+  margin-bottom: 10px;
+}
+
+.ai-header h1 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #3a7f5d;
+  margin: 10px 0;
+}
+
+.ai-header p {
+  color: #6b7f75;
+  font-size: 15px;
+}
+
+/* Card */
+.ai-card {
+  max-width: 900px;
+  margin: 0 auto 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+.ai-card p{
+    color: #4f5f58;
+}
+.ai-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: #3a7f5d;
+}
+
+.ai-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ai-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #4f5f58;
+}
+
+.ai-card li svg {
+  color: #6fbf9b;
+  margin-top: 2px;
+}
+
+/* Commit box */
+.ai-commit {
+  background: #fff9e6;
+  border-left: 6px solid #f0c04d;
+}
+
+.ai-commit h3 {
+  color: #b88700;
+}
+
+.ai-commit p {
+  font-size: 14px;
+  color: #6a5b2c;
+  line-height: 1.6;
+}

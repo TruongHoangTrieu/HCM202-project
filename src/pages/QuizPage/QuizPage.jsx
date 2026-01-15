@@ -464,7 +464,7 @@ const QuizPage = () => {
       ) : (
         <div className="result-card">
           <Award size={60} className="result-icon" />
-          <h2>Hoàn thành bài kiểm tra!</h2>
+          <h2 className="result-content">Hoàn thành bài kiểm tra!</h2>
           <p className="final-score">
             Số điểm của bạn: <span>{score}</span>
           </p>

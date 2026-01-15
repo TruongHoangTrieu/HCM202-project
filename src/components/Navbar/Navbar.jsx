@@ -7,7 +7,8 @@ import {
   Layers,
   HelpCircle,
   Menu, // Icon menu ba gạch
-  X,    // Icon đóng
+  X, // Icon đóng
+  Bot
 } from "lucide-react";
 import "./Navbar.css";
 
@@ -21,6 +22,7 @@ const Navbar = () => {
     { name: "Blog & Video", icon: <Video size={16} />, path: "/blog" },
     { name: "Nội Dung", icon: <Layers size={16} />, path: "/noi-dung" },
     { name: "Quiz", icon: <HelpCircle size={16} />, path: "/quiz" },
+    { name: "AI Usage", icon: <Bot size={16} />, path: "/ai" },
   ];
 
   // Hàm đóng menu khi click vào một mục
@@ -30,7 +32,12 @@ const Navbar = () => {
     <nav className="navbar-wrapper">
       <div className={`navbar-pill ${isMobileMenuOpen ? "mobile-open" : ""}`}>
         {/* Logo */}
-        <Link to="/" className="navbar-logo" onClick={closeMenu} style={{ textDecoration: 'none' }}>
+        <Link
+          to="/"
+          className="navbar-logo"
+          onClick={closeMenu}
+          style={{ textDecoration: "none" }}
+        >
           <div className="logo-box">
             <Leaf size={18} />
           </div>
@@ -38,8 +45,8 @@ const Navbar = () => {
         </Link>
 
         {/* Nút Hamburger cho Mobile */}
-        <button 
-          className="mobile-menu-toggle" 
+        <button
+          className="mobile-menu-toggle"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >

@@ -54,13 +54,13 @@ const HeroSection = () => {
         </p>
 
         {/* search */}
-        <div className="hero-search">
+        {/* <div className="hero-search">
           <input
             type="text"
             placeholder="Tìm kiếm tài liệu, bài viết, chủ đề..."
           />
           <button>Tìm kiếm</button>
-        </div>
+        </div> */}
 
         {/* stats */}
         <div className="hero-stats">
@@ -72,13 +72,13 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="stat-card">
+          {/* <div className="stat-card">
             <Leaf />
             <div>
               <strong>50+</strong>
               <span>Flashcard</span>
             </div>
-          </div>
+          </div> */}
 
           <div className="stat-card">
             <Users />

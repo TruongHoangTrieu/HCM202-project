@@ -12,6 +12,7 @@ import ContentPage from "./pages/ContentPage/ContentPage";
 import QuizPage from "./pages/QuizPage/QuizPage";
 import FooterSection from "./components/FooterSection/FooterSection";
 import AIChatbot from "./components/AIChatbot/AIChatbot";
+import AiUsage from "./pages/AiUsage/AiUsage";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -30,7 +31,7 @@ function App() {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/noi-dung" element={<ContentPage />} />
             <Route path="/quiz" element={<QuizPage />} />
-
+            <Route path="/ai" element={<AiUsage />} />
             {/* Trang Admin của bạn */}
             <Route path="/admin-dashboard" element={<VisitorDashboard />} />
 

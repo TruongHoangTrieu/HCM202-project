@@ -27,7 +27,7 @@ h1, h2, h3, .big-text, .hero-years, .logo-text {
   font-family: var(--font-main);
   font-weight: 900; /* Sử dụng trọng số cao nhất để tạo độ uy nghiêm */
   letter-spacing: 1px;
-  color: #fff;
+  
 }
 
 /* Các câu trích dẫn và văn bản phụ */
