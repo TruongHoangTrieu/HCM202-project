@@ -1,34 +1,51 @@
+/* =======================
+   GLOBAL VARIABLES (CHỈ KHAI BÁO 1 LẦN)
+======================= */
 :root {
   --primary-green: #84a358;
   --light-green: #a7c485;
   --bg-cream: #f9faf7;
+  --text-main: #2d3e32;
 }
 
+/* =======================
+   CONTENT PAGE WRAPPER
+======================= */
 .content-page-wrapper {
   background-color: var(--bg-cream);
   min-height: 100vh;
   padding: 100px 20px 80px;
 }
+
+/* =======================
+   HEADER
+======================= */
+.main-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
 .chapter-label {
   font-size: 40px;
   color: #677e73;
   font-weight: 600;
 }
-.main-header {
-  text-align: center;
-  margin-bottom: 80px;
-}
+
 .main-header h1 {
   color: var(--primary-green);
   font-size: 32px;
   margin-top: 20px;
 }
 
+/* =======================
+   TIMELINE
+======================= */
 .timeline-container {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .main-vertical-line {
   position: absolute;
   left: 50%;
@@ -42,119 +59,294 @@
 
 .section-block {
   position: relative;
-  margin-bottom: 120px;
   z-index: 2;
-}
-.bg-watermark {
-  position: absolute;
-  font-size: 400px;
-  color: rgba(167, 196, 133, 0.05);
-  font-weight: bold;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
+  margin-bottom: 120px;
 }
 
+/* =======================
+   SECTION COMMON
+======================= */
+.section-one-part-1,
+.section-one-part-2 {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 80px;
+}
+
+/* =======================
+   BANNER (DÙNG CHUNG)
+======================= */
 .section-banner-center {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
+  position: relative;
 }
+
 .badge-circle {
-  width: 50px;
-  height: 50px;
-  background: var(--light-green);
+  width: 48px;
+  height: 48px;
+  background-color: var(--light-green);
   color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto -25px;
-  border: 4px solid var(--bg-cream);
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 auto -24px;
   position: relative;
-  z-index: 4;
-}
-.banner-box {
-  background: var(--light-green);
-  color: white;
-  padding: 25px 50px;
-  border-radius: 20px;
-  display: inline-block;
-  max-width: 85%;
+  z-index: 5;
+  border: 4px solid var(--bg-cream);
 }
 
+.banner-box {
+  background-color: var(--light-green);
+  color: white;
+  padding: 20px 60px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* =======================
+   LAYOUT
+======================= */
 .content-row {
   display: flex;
-  gap: 50px;
-  padding: 0 5%;
+  gap: 40px;
   align-items: flex-start;
+  padding: 0 20px;
   margin-top: 40px;
 }
+
 .content-row.reverse {
   flex-direction: row-reverse;
 }
-.content-col {
-  flex: 1;
-  z-index: 5;
+
+.text-side {
+  flex: 1.2;
 }
-.img-col img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+.img-side {
+  flex: 0.8;
 }
 
-.offset-content {
-  width: 45%;
-  padding: 20px;
-  z-index: 5;
+/* =======================
+   SUB TITLE
+======================= */
+.sub-title-box {
+  background-color: var(--light-green);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 25px;
 }
-.offset-content.left {
-  margin-right: auto;
+.details-list {
+  list-style: none;      /* Quan trọng: Bỏ dấu chấm tròn */
+  padding-left: 0;       /* Bỏ khoảng trống bên trái của danh sách */
+  margin: 0;             /* Đảm bảo không có margin mặc định */
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
 }
-.offset-content.right {
-  margin-left: auto;
+.details-list li {
+  margin-bottom: 12px;   /* Khoảng cách giữa các dòng cho thoáng */
+  position: relative;
+  line-height: 1.8;
+}
+.indent-list {
+  padding-left: 15px;    /* Thụt lề cho các dòng bắt đầu bằng dấu + */
+  color: var(--text-main);
+  font-weight: 500;
+}
+/* =======================
+   ACCORDION (DÙNG CHUNG)
+======================= */
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .accordion-card {
   background: white;
   border-radius: 15px;
   border: 1px solid #eee;
-  margin-bottom: 15px;
-}
-.accordion-header {
-  padding: 18px;
-  display: flex;
-  justify-content: space-between;
-  color: var(--primary-green);
-  font-weight: bold;
-  cursor: pointer;
-}
-.accordion-body {
-  padding: 0 20px 20px;
-  font-size: 14px;
-  line-height: 1.6;
-  color: #555;
-}
-.quote-text {
-  margin-top: 15px;
-  text-align: center;
-  color: var(--primary-green);
-  font-style: italic;
-  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-.floating-chat-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: var(--primary-green);
-  color: white;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+.accordion-card.active {
+  border-color: var(--light-green);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-header {
+  padding: 18px 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  cursor: pointer;
+}
+
+.item-title {
+  color: var(--primary-green);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.toggle-icon-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--light-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-green);
+}
+
+.accordion-body-wrapper {
+  padding: 0 25px 25px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =======================
+   QUOTE
+======================= */
+.quote-box-ceremonial {
+  border-left: 4px solid var(--primary-green);
+  padding: 15px 20px;
+  background: #f1f8e9;
+  margin-top: 15px;
+}
+
+.quote-texts {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.quote-author {
+  display: block;
+  text-align: right;
+  color: var(--primary-green);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* =======================
+   IMAGE + LIGHTBOX
+======================= */
+.images-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.img-caption-main {
+  color: var(--primary-green);
+  padding-top: 20px;
+  font-weight: 600;
+  font-size: 18px;
+}
+.img-source {
+  color: var(--light-green);
+}
+.image-frame-decor img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.clickable-image {
+  position: relative;
+  cursor: zoom-in;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.clickable-image img {
+  transition: transform 0.5s ease;
+}
+
+.clickable-image:hover img {
+  transform: scale(1.05);
+}
+
+.image-overlay-hint {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.clickable-image:hover .image-overlay-hint {
+  opacity: 1;
+}
+
+/* Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-content img {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 8px;
+  margin-top: 80px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 100px;
+  right: 500px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* =======================
+   EFFECT
+======================= */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 992px) {
+  .content-row,
+  .content-row.reverse {
+    flex-direction: column;
+  }
 }

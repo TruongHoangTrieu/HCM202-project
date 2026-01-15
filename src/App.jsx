@@ -11,6 +11,7 @@ import BlogPage from "./pages/BlogPage/BlogPage";
 import ContentPage from "./pages/ContentPage/ContentPage";
 import QuizPage from "./pages/QuizPage/QuizPage";
 import FooterSection from "./components/FooterSection/FooterSection";
+import AIChatbot from "./components/AIChatbot/AIChatbot";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,7 +23,7 @@ function App() {
       ) : (
         <>
           <Navbar />
-
+          <AIChatbot />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/tai-lieu" element={<DocumentPage />} />

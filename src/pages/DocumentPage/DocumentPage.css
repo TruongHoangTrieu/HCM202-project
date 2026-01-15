@@ -128,7 +128,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 18px;
+  margin-bottom: 15px !important;
 }
 
 .doc-icon {
@@ -169,17 +169,22 @@
   gap: 12px;
 }
 
-.card-actions button {
+.card-actions button,
+.card-actions a {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+
   padding: 10px;
   border-radius: 10px;
   border: none;
+
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+
+  text-decoration: none; /* ❗ bỏ gạch chân */
   transition: 0.2s;
 }
 
@@ -203,4 +208,25 @@
   text-align: center;
   color: var(--text-muted);
   padding: 50px;
+}
+.image-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.image-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+.image-modal img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }

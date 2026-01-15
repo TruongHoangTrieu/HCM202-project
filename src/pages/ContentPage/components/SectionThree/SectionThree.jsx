@@ -1,6 +1,6 @@
 import React from 'react';
 import { Plus, Minus } from 'lucide-react';
-import './SectionThree.css';
+
 
 const SectionThree = ({ activeItem, setActiveItem }) => {
   const subItems = [

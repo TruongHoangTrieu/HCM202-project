@@ -12,6 +12,9 @@
   display: flex;
   justify-content: center;
   background: #fff;
+  position: sticky; /* Giữ navbar ở trên cùng khi cuộn */
+  top: 0;
+  z-index: 1000;
 }
 
 /* Pill container */
@@ -23,6 +26,8 @@
   align-items: center;
   gap: 28px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 /* Logo */
@@ -32,6 +37,7 @@
   gap: 10px;
   font-weight: 700;
   color: var(--green-dark);
+  z-index: 1001;
 }
 
 .logo-box {
@@ -45,7 +51,7 @@
   color: white;
 }
 
-/* Menu */
+/* Menu mặc định (Desktop) */
 .navbar-menu {
   list-style: none;
   display: flex;
@@ -66,14 +72,70 @@
   color: var(--text);
   cursor: pointer;
   transition: 0.25s ease;
+  white-space: nowrap;
 }
 
 .menu-item:hover {
   background: rgba(168, 200, 109, 0.15);
 }
 
-/* Active */
 .menu-item.active {
   background: var(--green);
   color: white;
+}
+
+/* Nút Toggle Mobile (Ẩn trên Desktop) */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--green-dark);
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block; /* Hiện nút ba gạch */
+  }
+
+  .navbar-pill {
+    width: 90%;
+    border-radius: 20px; /* Bo góc ít hơn trên mobile */
+    justify-content: space-between;
+  }
+
+  /* Biến menu thành danh sách xổ xuống */
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--bg);
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    
+    /* Hiệu ứng ẩn/hiện */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-menu.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .menu-item {
+    width: 100%;
+    padding: 12px 20px;
+  }
 }

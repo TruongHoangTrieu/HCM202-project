@@ -1,16 +1,19 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom"; // Import Link và useLocation
+import React, { useState } from "react"; // Thêm useState
+import { Link, useLocation } from "react-router-dom";
 import {
   Leaf,
   BookOpen,
   Video,
   Layers,
   HelpCircle,
+  Menu, // Icon menu ba gạch
+  X,    // Icon đóng
 } from "lucide-react";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const location = useLocation(); // Lấy thông tin đường dẫn hiện tại của trình duyệt
+  const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State quản lý menu
 
   const menuItems = [
     { name: "Trang chủ", icon: <Leaf size={16} />, path: "/" },
@@ -20,19 +23,31 @@ const Navbar = () => {
     { name: "Quiz", icon: <HelpCircle size={16} />, path: "/quiz" },
   ];
 
+  // Hàm đóng menu khi click vào một mục
+  const closeMenu = () => setIsMobileMenuOpen(false);
+
   return (
     <nav className="navbar-wrapper">
-      <div className="navbar-pill">
-        {/* Logo - Bọc trong Link để click về trang chủ */}
-        <Link to="/" className="navbar-logo" style={{ textDecoration: 'none' }}>
+      <div className={`navbar-pill ${isMobileMenuOpen ? "mobile-open" : ""}`}>
+        {/* Logo */}
+        <Link to="/" className="navbar-logo" onClick={closeMenu} style={{ textDecoration: 'none' }}>
           <div className="logo-box">
             <Leaf size={18} />
           </div>
           <span>Tư Tưởng HCM</span>
         </Link>
 
+        {/* Nút Hamburger cho Mobile */}
+        <button 
+          className="mobile-menu-toggle" 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
         {/* Menu */}
-        <ul className="navbar-menu">
+        <ul className={`navbar-menu ${isMobileMenuOpen ? "active" : ""}`}>
           {menuItems.map((item) => (
             <li key={item.name}>
               <Link
@@ -40,6 +55,7 @@ const Navbar = () => {
                 className={`menu-item ${
                   location.pathname === item.path ? "active" : ""
                 }`}
+                onClick={closeMenu} // Click vào link thì đóng menu
               >
                 {item.icon}
                 <span>{item.name}</span>
