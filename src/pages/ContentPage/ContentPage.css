@@ -54,12 +54,12 @@
   width: 2px;
   background-color: var(--light-green);
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: auto;
 }
 
 .section-block {
   position: relative;
-  z-index: 2;
+  z-index: auto;
   margin-bottom: 120px;
 }
 
@@ -69,7 +69,7 @@
 .section-one-part-1,
 .section-one-part-2 {
   position: relative;
-  z-index: 2;
+  z-index: auto;
   margin-bottom: 80px;
 }
 
@@ -120,9 +120,23 @@
 }
 
 .content-row.reverse {
-  flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row-reverse; /* Đảo ngược vị trí */
+  align-items: flex-start;
+  gap: 40px; /* Tạo khoảng cách giữa ảnh và chữ */
 }
-
+.reverse .text-side {
+  flex: 1; /* Tự động chiếm không gian còn lại */
+  min-width: 0; /* Ngăn chặn việc lấn chiếm không gian */
+}
+.reverse .img-side {
+  flex: 1; /* Chia đôi không gian với cột chữ */
+  max-width: 50%; /* Không cho phép ảnh chiếm quá nửa màn hình */
+}
+.reverse .img-side img {
+  width: 100%; /* Ảnh luôn vừa vặn trong cột của nó */
+  display: block;
+}
 .text-side {
   flex: 1.2;
 }
@@ -144,20 +158,20 @@
   margin-bottom: 25px;
 }
 .details-list {
-  list-style: none;      /* Quan trọng: Bỏ dấu chấm tròn */
-  padding-left: 0;       /* Bỏ khoảng trống bên trái của danh sách */
-  margin: 0;             /* Đảm bảo không có margin mặc định */
+  list-style: none; /* Quan trọng: Bỏ dấu chấm tròn */
+  padding-left: 0; /* Bỏ khoảng trống bên trái của danh sách */
+  margin: 0; /* Đảm bảo không có margin mặc định */
   color: #555;
   font-size: 14px;
   line-height: 1.6;
 }
 .details-list li {
-  margin-bottom: 12px;   /* Khoảng cách giữa các dòng cho thoáng */
+  margin-bottom: 12px; /* Khoảng cách giữa các dòng cho thoáng */
   position: relative;
   line-height: 1.8;
 }
 .indent-list {
-  padding-left: 15px;    /* Thụt lề cho các dòng bắt đầu bằng dấu + */
+  padding-left: 15px; /* Thụt lề cho các dòng bắt đầu bằng dấu + */
   color: var(--text-main);
   font-weight: 500;
 }
@@ -206,6 +220,8 @@
   align-items: center;
   justify-content: center;
   color: var(--light-green);
+  line-height: 1;
+  flex-shrink: 0;
 }
 
 .accordion-body-wrapper {
@@ -310,7 +326,7 @@
   max-width: 90%;
   max-height: 85vh;
   border-radius: 8px;
-  margin-top: 80px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .lightbox-close {

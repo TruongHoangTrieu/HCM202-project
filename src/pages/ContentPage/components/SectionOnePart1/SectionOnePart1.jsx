@@ -10,8 +10,8 @@ const SectionOnePart1 = ({ activeItem, setActiveItem }) => {
       title: "1.1 Độc lập, tự do là quyền thiêng liêng, bất khả xâm phạm",
       content: [
         "Xuất phát từ lịch sử dựng nước và giữ nước của dân tộc Việt Nam từ ngàn xưa đến nay gắn liền với truyền thống yêu nước, đấu tranh chống ngoại xâm.",
-        "Độc lập, tự do không chỉ là mục tiêu chính trị mà còn là khát khao lớn nhất, là giá trị tinh thần bất hủ",
-        "Khi nền độc lập bị đe dọa, ý chí của Người trở thành lời hiệu triệu toàn dân tộc sẵn sàng hy sinh để bảo vệ chủ quyền",
+        "Độc lập, tự do không chỉ là mục tiêu chính trị mà còn là khát khao lớn nhất, là giá trị tinh thần bất hủ.",
+        "Khi nền độc lập bị đe dọa, ý chí của Người trở thành lời hiệu triệu toàn dân tộc sẵn sàng hy sinh để bảo vệ chủ quyền.",
       ],
       quote: {
         text: "Tất cả các dân tộc trên thế giới đều sinh ra bình đẳng, dân tộc nào cũng có quyền sống, quyền sung sướng và quyền tự do... Đó là những lẽ phải không ai chối cãi được",
@@ -21,7 +21,7 @@ const SectionOnePart1 = ({ activeItem, setActiveItem }) => {
         {
           url: "/2.jpg",
           caption: "Bản tuyên ngôn độc lập được Chủ tịch Hồ Chí Minh long trọng công bố ngày 2/9/1945.",
-          source: "https://baochinhphu.vn/...",
+          source: "https://baochinhphu.vn/tuyen-ngon-doc-lap-va-nha-nuoc-phap-quyen-102299509.htm",
         },
       ],
       // Đã xóa caption/source thừa ở đây
@@ -33,7 +33,7 @@ const SectionOnePart1 = ({ activeItem, setActiveItem }) => {
         "Theo Hồ Chí Minh, độc lập dân tộc phải gắn với tự do của nhân dân.",
         ' Người đánh giá cao các nội dung về độc lập, tự do và hạnh phúc trong Học thuyết "Tam dân" của Tôn Trung Sơn.',
         " Người viện dẫn chân lý về tự do và bình đẳng về quyền lợi trong Tuyên ngôn Nhân quyền và Dân quyền của Cách mạng Pháp (1791) để khẳng định dân tộc Việt Nam đương nhiên cũng phải có các quyền này.",
-        "Đối với Người độc lập phải gắn liền với cơm no, áo ấm và hạnh phúc của nhân dân",
+        "Đối với Người độc lập phải gắn liền với cơm no, áo ấm và hạnh phúc của nhân dân.",
         ' Ngay sau thắng lợi CMT8 1945, trong hoàn cảnh dân tộc đối mặt với đói rét và mù chữ, Người yêu cầu :"Chúng ta phải thực hiện ngay":',
         "+ Làm cho dân có ăn.",
         "+ Làm cho dân có mặc.",
@@ -48,12 +48,12 @@ const SectionOnePart1 = ({ activeItem, setActiveItem }) => {
         {
           url: "/6.jpg",
           caption: "Tôn Trung Sơn - Người sáng tạo ra Học thuyết Tam dân",
-          source: "https://sachhiem.net/...",
+          source: "https://trithucvn2.net/van-hoa/doc-lap-tu-do-hanh-phuc-va-nguon-goc-chu-nghia-tam-dan-cua-ton-dat-tien.html",
         },
         {
           url: "/7.jpg",
           caption: "Tuyên ngôn Nhân quyền và Dân quyền của Cách mạng Pháp năm 1791",
-          source: "Tư liệu lưu trữ",
+          source: "https://sachhiem.net/print.php?id=7543",
         },
       ],
     },
@@ -72,7 +72,7 @@ const SectionOnePart1 = ({ activeItem, setActiveItem }) => {
         {
           url: "/8.jpg",
           caption: "Người thay mặt Chính phủ ký với đại diện Chính phủ Pháp Hiệp định Sơ bộ ngày 6-3-1946",
-          source: "https://hcmcpv.org.vn/...",
+          source: "https://hcmcpv.org.vn/tin-tuc/hiep-dinh-so-bo-viet-nam-phap-6-3-1946-ky-tich-khoi-dau-lich-su-dau-tranh-ngoai-giao-cua-nuoc-viet-1454411071",
         },
       ],
     },
@@ -84,14 +84,14 @@ const SectionOnePart1 = ({ activeItem, setActiveItem }) => {
         "Trong mọi giai đoạn, Hồ Chí Minh luôn khẳng định sự thống nhất của Việt Nam là một chân lý bất di dịch.",
         "+ \"Đồng bào Nam Bộ là dân nước Việt Nam. Sông có thể cạn, núi có thể mòn, song chân lý đó không bao giờ thay đổi\" (Trích Thư gửi đồng bào Nam Bộ, 1946).",
         "+ \"Nước Việt Nam là một, dân tộc Việt Nam là một\" (Khẳng định tháng 2/1958).",
-        "+ Trong bản Di chúc, Người đã thể hiện ý chí sắt đá và niềm tin vào tương lai thống nhất của nước nhà: “Dù khó khăn gian khổ, nhân dân ta nhất định sẽ hoàn toàn thắng lợi.”",
+        "+ Trong bản Di chúc, Người đã thể hiện ý chí sắt đá và niềm tin vào tương lai thống nhất của nước nhà: “Dù khó khăn gian khổ, nhân dân ta nhất định sẽ hoàn toàn thắng lợi. Đế quốc Mỹ phải rút khỏi nước ta. Tổ quốc ta nhất định sẽ thống nhất. Đồng bào Nam, Bắc nhất định sẽ sum họp một nhà”.",
       ],
       quote: { text: "", source: "" },
       images: [
         {
           url: "/9.jpg",
           caption: "Thư gửi đồng bào Nam Bộ, 1946",
-          source: "https://nghiencuutttphcm.blogspot.com/...",
+          source: "https://nghiencuutttphcm.blogspot.com/2018/07/thu-cua-chu-tich-ho-chi-minh-gui-ong.html",
         },
       ],
     },
@@ -104,9 +104,9 @@ const SectionOnePart1 = ({ activeItem, setActiveItem }) => {
       {/* Lightbox Modal */}
       {selectedImage && (
         <div className="lightbox-overlay" onClick={() => setSelectedImage(null)}>
-          <button className="lightbox-close-fixed" onClick={() => setSelectedImage(null)}>
+          {/* <button className="lightbox-close-fixed" onClick={() => setSelectedImage(null)}>
             <X size={32} />
-          </button>
+          </button> */}
           <div className="lightbox-content">
             <img src={selectedImage} alt="Phóng to" className="fade-in" />
           </div>

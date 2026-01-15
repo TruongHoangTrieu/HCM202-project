@@ -17,7 +17,7 @@ const SectionOnePart2 = ({ activeItem, setActiveItem }) => {
         "Khẳng định con đường duy nhất",
         '+ "Muốn cứu nước và giải phóng dân tộc không có con đường nào khác con đường cách mạng vô sản." ',
         "+ Giải phóng dân tộc gắn với giải phóng giai cấp, trong đó giải phóng dân tộc là trước hết, trên hết.",
-        "+ Gắn liền độc lập dân tộc với chủ nghĩa xã hội",
+        "+ Gắn liền độc lập dân tộc với chủ nghĩa xã hội.",
       ],
       quote: {
         text: "",
@@ -86,6 +86,67 @@ const SectionOnePart2 = ({ activeItem, setActiveItem }) => {
             "Bút tích Lời kêu gọi toàn quốc kháng chiến của Chủ tịch Hồ Chí Minh",
           source:
             "https://baolaichau.vn/chinh-tri/ky-niem-74-nam-ngay-toan-quoc-khang-chien-19121946-19122020",
+        },
+      ],
+    },
+    {
+      id: "2.4",
+      title:
+        "2.4 Cách mạng giải phóng dân tộc cần chủ động, sáng tạo, có khả năng giành thắng lợi trước cách mạng vô sản ở chính quốc",
+      content: [
+        "Quán triệt tư tưởng của V.I.Lênin, Hồ Chí Minh đã chỉ rõ bản chất bóc lột của chủ nghĩa tư bản và xác lập mối quan hệ khăng khít, tác động qua lại lẫn nhau giữa cách mạng ở thuộc địa và chính quốc - mối quan hệ bình đẳng, không lệ thuộc, phụ thuộc vào nhau.",
+        "Hồ Chí Minh cho rằng: cách mạng thuộc địa không những không phụ thuộc vào cách mạng vô sản ở chính quốc mà có thể giành thắng lợi trước. Dựa trên cơ sở:",
+        "+ Thuộc địa là nơi duy trì sự tồn tại, phát triển, là món mồi “béo bở” cho chủ nghĩa đế quốc.",
+        "+ Tinh thần đấu tranh cách mạng hết sức quyết liệt của các dân tộc thuộc địa sẽ bùng lên mạnh mẽ, hình thành một “lực lượng khổng lồ” khi được tập hợp, hướng dẫn và giác ngộ cách mạng. ",
+        "+ Đối với các tầng lớp khác: Tranh thủ hoặc trung lập hóa phú nông, trung, tiểu địa chủ và tư sản Việt Nam chưa rõ mặt phản cách mạng.",
+        "Luận điểm của Người đã khắc phục những hạn chế trong quan điểm của Quốc tế Cộng sản và được chứng minh bởi thắng lợi lịch sử.",
+      ],
+      quote: {
+        text: "Chủ nghĩa tư bản là một con đỉa có một cái vòi bám vào giai cấp vô sản ở chính quốc và một cái vòi khác bám vào giai cấp vô sản ở thuộc địa.",
+        source: "Bản án chế độ thực dân Pháp (1925)",
+      },
+      images: [
+        {
+          url: "/12.jpg",
+          caption:
+            "Ghi chép của GS Hoàng Xuân Hãn về cuốn sách ở trang thứ tư.",
+          source:
+            "https://baotanglichsu.vn/vi/Articles/1002/73331/sach-ban-an-che-djo-thuc-dan-phap-le-proces-de-la-colonisation-francaise-luu-giu-tai-bao-tang-lich-su-quoc-gia.html",
+        },
+      ],
+    },
+    {
+      id: "2.5",
+      title:
+        "2.5 Cách mạng giải phóng dân tộc phải được tiến hành bằng phương pháp bạo lực cách mạng",
+      content: [
+        "Theo C. Mác và Ph. Ăngghen: “Bạo lực là bà đỡ của mọi xã hội cũ đang thai nghén một xã hội mới.”",
+        "Trên cơ sở tiếp thu quan điểm của C.Mác và Ph.Ăngghen, V.I.Lênin khẳng định: không có bạo lực cách mạng thì không thể thay thế nhà nước tư sản bằng nhà nước vô sản được. ",
+        "Hồ Chí Minh đã tiếp thu và vận dụng các quan điểm trên một cách phù hợp với hoàn cảnh dân tộc là: Dùng bạo lực cách mạng để chống lại bạo lực phản cách mạng.",
+        "Bạo lực cách mạng không đơn thuần là vũ lực mà là sức mạnh tổng hợp:",
+        "+ Bạo lực của quần chúng: Đây là bạo lực của số đông nhân dân",
+        "+ Lực lượng: Lực lượng chính trị và lực lượng quân sự.",
+        "+ Hình thức đấu tranh: Đấu tranh chính trị và đấu tranh vũ trang.",
+        "+ Việc lựa chọn hình thức đấu tranh phải căn cứ vào hoàn cảnh lịch sử cụ thể."
+      ],
+      quote: {
+        text: "",
+        source: "",
+      },
+      images: [
+        {
+          url: "/14.jpg",
+          caption:
+            "Một số hình ảnh về Cách Mạng Tháng 8 dành thắng lợi",
+          source:
+            "https://alohamedia.vn/hinh-anh-cach-mang-thang-8/",
+        },
+        {
+          url: "/15.jpg",
+          caption:
+            "Một số hình ảnh về Cách Mạng Tháng 8 dành thắng lợi",
+          source:
+            "https://alohamedia.vn/hinh-anh-cach-mang-thang-8/",
         },
       ],
     },

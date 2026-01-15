@@ -6,15 +6,15 @@ import "./ContentPage.css"; // Import file CSS dùng chung
 // Import 2 component con vừa tạo
 import SectionOnePart1 from "./components/SectionOnePart1/SectionOnePart1";
 import SectionOnePart2 from "./components/SectionOnePart2/SectionOnePart2";
-// import SectionTwo from "./components/SectionTwo/SectionTwo";
-// import SectionThree from "./components/SectionThree/SectionThree";
-// import SectionFour from "./components/SectionFour/SectionFour";
+import SectionTwo from "./components/SectionTwo/SectionTwo";
+import SectionThree from "./components/SectionThree/SectionThree";
+import SectionFour from "./components/SectionFour/SectionFour";
 
 const ContentPage = () => {
   // State quản lý mục nào đang được mở trên toàn trang
   // Mặc định mở mục "1.1"
   const [activeItem, setActiveItem] = useState("1.1");
-
+  
   return (
     <div className="content-page-wrapper">
       {/* Header chính của trang */}
@@ -42,9 +42,9 @@ const ContentPage = () => {
             activeItem={activeItem}
             setActiveItem={setActiveItem}
           />
-          {/* <SectionTwo activeItem={activeItem} setActiveItem={setActiveItem} />
+          <SectionTwo activeItem={activeItem} setActiveItem={setActiveItem} />
           <SectionThree activeItem={activeItem} setActiveItem={setActiveItem} />
-          <SectionFour activeItem={activeItem} setActiveItem={setActiveItem} /> */}
+          <SectionFour activeItem={activeItem} setActiveItem={setActiveItem} />
         </section>
 
         {/* --- CÁC PHẦN KHÁC (II, III, IV) --- */}
