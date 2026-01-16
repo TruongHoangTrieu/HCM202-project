@@ -231,3 +231,15 @@
   box-shadow: 0 5px 15px rgba(132, 163, 88, 0.4);
   cursor: pointer;
 }
+.text-correct{
+  color: green;
+  font-size: 20px;
+  line-height: 1.8;
+  font-weight: 600;
+}
+.text-wrong{
+    color: red;
+  font-size: 17px;
+  line-height: 1.8;
+  font-weight: 600;
+}
