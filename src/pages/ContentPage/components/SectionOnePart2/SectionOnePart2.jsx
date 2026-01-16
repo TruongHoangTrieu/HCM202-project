@@ -76,8 +76,8 @@ const SectionOnePart2 = ({ activeItem, setActiveItem }) => {
         "+ Có ý chí cách mạng bền bỉ và quyết tâm cao nhất.",
       ],
       quote: {
-        text: "Bất kỳ đàn ông, đàn bà, bất kỳ người già, người trẻ, không chia tôn giáo, đảng phái, dân tộc. Hễ là người Việt Nam thì phải đứng lên đánh thực dân Pháp để cứu Tổ quốc” - Lời kêu gọi toàn quốc kháng chiến (12-1946)",
-        source: "",
+        text: "Bất kỳ đàn ông, đàn bà, bất kỳ người già, người trẻ, không chia tôn giáo, đảng phái, dân tộc. Hễ là người Việt Nam thì phải đứng lên đánh thực dân Pháp để cứu Tổ quốc” ",
+        source: "Lời kêu gọi toàn quốc kháng chiến (12-1946)",
       },
       images: [
         {
@@ -219,7 +219,7 @@ const SectionOnePart2 = ({ activeItem, setActiveItem }) => {
                     {item.quote && item.quote.text && (
                       <div className="quote-box-ceremonial">
                         <p className="quote-texts">"{item.quote.text}"</p>
-                        <span className="quote-author">
+                        <span className="quote-authors">
                           &mdash; {item.quote.source}
                         </span>
                       </div>

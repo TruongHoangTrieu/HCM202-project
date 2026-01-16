@@ -145,7 +145,7 @@ const SectionOnePart1 = ({ activeItem, setActiveItem }) => {
                     {item.quote && item.quote.text && (
                       <div className="quote-box-ceremonial">
                         <p className="quote-texts">"{item.quote.text}"</p>
-                        <span className="quote-author">&mdash; {item.quote.source}</span>
+                        <span className="quote-authors">&mdash; {item.quote.source}</span>
                       </div>
                     )}
                   </div>

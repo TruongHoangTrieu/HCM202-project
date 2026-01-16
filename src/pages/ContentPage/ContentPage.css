@@ -254,10 +254,10 @@
   font-size: 18px;
 }
 
-.quote-author {
+.quote-authors {
   display: block;
   text-align: right;
-  color: #fff;
+  color: var(--primary-green);
   font-weight: 700;
   font-size: 13px;
 }
