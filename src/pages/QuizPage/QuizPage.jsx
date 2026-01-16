@@ -1187,11 +1187,16 @@ const handleNext = () => {
         <h1>
           <span className="highlight">Quiz</span> Kiểm tra
         </h1>
-        <p>Kiểm tra kiến thức về tư tưởng Hồ Chí Minh (10 câu ngẫu nhiên)</p>
+        <p>Kiểm tra kiến thức về tư tưởng Hồ Chí Minh</p>
       </header>
 
       {!isFinished ? (
-        <div className="quiz-container">
+  <div className="quiz-container">
+    {/* ĐOẠN NÀY HIỂN THỊ SỐ CÂU VÀ ĐIỂM SỐ */}
+    <div className="quiz-stats">
+      <span>Câu {currentQuestion + 1} / {quizQuestions.length}</span>
+      <span>Điểm: {score}</span>
+    </div>
           {/* Progress Bar */}
           <div className="progress-bar">
             <div className="progress-fill" style={{ width: `${progress}%` }} />
