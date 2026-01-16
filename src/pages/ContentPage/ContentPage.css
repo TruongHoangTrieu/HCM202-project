@@ -257,7 +257,7 @@
 .quote-author {
   display: block;
   text-align: right;
-  color: var(--primary-green);
+  color: #fff;
   font-weight: 700;
   font-size: 13px;
 }
